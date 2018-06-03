@@ -30,6 +30,7 @@ public class Walking : MonoBehaviour {
 		}
 
 		if (Input.GetKeyDown (KeyCode.Space)) {
+			anim.SetBool ("JumpFinished", false);
 			anim.SetTrigger ("Jump");
 		}
 
@@ -41,6 +42,17 @@ public class Walking : MonoBehaviour {
 		if (Input.GetKey (KeyCode.D)) {
 			transform.Rotate (0, rotationSpeed, 0);
 			Camera.main.transform.Rotate (0, rotationSpeed, 0);
+		}
+
+		if (anim.GetBool ("JumpFinished")) {
+			if (Input.GetKey (KeyCode.W)) {
+				anim.SetTrigger ("Running");
+			} else if (Input.GetKey (KeyCode.S)) {
+				anim.SetTrigger ("RunningBackwards");
+			} else {
+				anim.SetTrigger ("Idle");
+			}
+			anim.SetBool ("JumpFinished", false);
 		}
 	}
 }
