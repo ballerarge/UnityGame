@@ -8,9 +8,6 @@ public class CameraFollow : MonoBehaviour {
 	public GameObject player;
 	public float cameraDistance;
 
-	void Start() {
-	}
-
 	void LateUpdate() {
 		transform.position = player.transform.position - player.transform.forward * cameraDistance;
 		transform.LookAt (player.transform.position);
