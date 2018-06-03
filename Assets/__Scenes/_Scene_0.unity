@@ -222,8 +222,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 4
---- !u!65 &899781004
-BoxCollider:
+--- !u!64 &899781004
+MeshCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -231,9 +231,11 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2, y: 4, z: 1.5}
-  m_Center: {x: 0, y: 2, z: 0}
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 3d0650642d47513449b350b60ff4eb4a, type: 3}
 --- !u!4 &899781005 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400170, guid: 3d0650642d47513449b350b60ff4eb4a, type: 3}
