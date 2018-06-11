@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\_Scripts\AttachWeapon.cs" />
+     <Compile Include="Assets\_Scripts\AutoConnectJoint.cs" />
      <Compile Include="Assets\_Scripts\CameraFollow.cs" />
      <Compile Include="Assets\_Scripts\CheckAnimationStatus.cs" />
      <Compile Include="Assets\_Scripts\Walking.cs" />
