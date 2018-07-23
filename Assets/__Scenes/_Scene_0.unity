@@ -178,6 +178,53 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1001 &365250585
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4542085190053852, guid: 22ad651c78c4a494e92acb152dcc7ac8, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4542085190053852, guid: 22ad651c78c4a494e92acb152dcc7ac8, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4542085190053852, guid: 22ad651c78c4a494e92acb152dcc7ac8, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4542085190053852, guid: 22ad651c78c4a494e92acb152dcc7ac8, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4542085190053852, guid: 22ad651c78c4a494e92acb152dcc7ac8, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4542085190053852, guid: 22ad651c78c4a494e92acb152dcc7ac8, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4542085190053852, guid: 22ad651c78c4a494e92acb152dcc7ac8, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4542085190053852, guid: 22ad651c78c4a494e92acb152dcc7ac8, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 22ad651c78c4a494e92acb152dcc7ac8, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1 &365250586 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1278064415222584, guid: 22ad651c78c4a494e92acb152dcc7ac8,
+    type: 2}
+  m_PrefabInternal: {fileID: 365250585}
 --- !u!1 &1902463732
 GameObject:
   m_ObjectHideFlags: 0
@@ -355,7 +402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e74ace55cbd61d54a8ba5cf2e09722e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 365250586}
   cameraDistance: 5
 --- !u!1 &2110180077
 GameObject:

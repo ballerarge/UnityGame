@@ -10,6 +10,7 @@ public class CameraFollow : MonoBehaviour {
 
 	void LateUpdate() {
 		transform.position = player.transform.position - player.transform.forward * cameraDistance;
+//		transform.position = new Vector3 (transform.position.x, transform.position.y + 5, transform.position.z);
 		transform.LookAt (player.transform.position);
 	}
 }
