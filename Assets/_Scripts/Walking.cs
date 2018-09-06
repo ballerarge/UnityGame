@@ -18,7 +18,7 @@ public class Walking : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.W)) {
+        if (Input.GetKeyDown (KeyCode.W)) {
 			anim.SetTrigger ("Running");
         } else if (Input.GetKeyUp (KeyCode.W)) {
 			anim.SetTrigger ("Idle");
