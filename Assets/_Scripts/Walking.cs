@@ -6,6 +6,7 @@ public class Walking : MonoBehaviour {
 
 	[Header ("Set in Inspector")]
 	public float rotationSpeed;
+    public Transform characterFollow;
 
 	Animator anim;
 
@@ -19,30 +20,31 @@ public class Walking : MonoBehaviour {
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.W)) {
 			anim.SetTrigger ("Running");
-		} else if (Input.GetKeyUp (KeyCode.W)) {
+        } else if (Input.GetKeyUp (KeyCode.W)) {
 			anim.SetTrigger ("Idle");
-		}
+        }
 
 		if (Input.GetKeyDown (KeyCode.S)) {
 			anim.SetTrigger ("RunningBackwards");
-		} else if (Input.GetKeyUp (KeyCode.S)) {
+            transform.parent.position = new Vector3(0, 0, 0);
+        } else if (Input.GetKeyUp (KeyCode.S)) {
 			anim.SetTrigger ("Idle");
-		}
+        }
 
 		if (Input.GetKeyDown (KeyCode.Space)) {
 			anim.SetBool ("JumpFinished", false);
 			anim.SetTrigger ("Jump");
-		}
+        }
 
 		if (Input.GetKey (KeyCode.A)) {
 			transform.Rotate (0, -rotationSpeed, 0);
-			Camera.main.transform.Rotate (0, -rotationSpeed, 0);
+            characterFollow.Rotate(0, -rotationSpeed, 0);
 		}
 
 		if (Input.GetKey (KeyCode.D)) {
 			transform.Rotate (0, rotationSpeed, 0);
-			Camera.main.transform.Rotate (0, rotationSpeed, 0);
-		}
+            characterFollow.Rotate(0, rotationSpeed, 0);
+        }
 
 		if (anim.GetBool ("JumpFinished")) {
 			if (Input.GetKey (KeyCode.W)) {
