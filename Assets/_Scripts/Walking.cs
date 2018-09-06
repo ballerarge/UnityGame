@@ -26,7 +26,6 @@ public class Walking : MonoBehaviour {
 
 		if (Input.GetKeyDown (KeyCode.S)) {
 			anim.SetTrigger ("RunningBackwards");
-            transform.parent.position = new Vector3(0, 0, 0);
         } else if (Input.GetKeyUp (KeyCode.S)) {
 			anim.SetTrigger ("Idle");
         }
