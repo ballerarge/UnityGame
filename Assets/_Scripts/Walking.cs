@@ -7,6 +7,7 @@ public class Walking : MonoBehaviour {
 	[Header ("Set in Inspector")]
 	public float rotationSpeed;
     public Transform characterFollow;
+    public float maxRot;
 
 	Animator anim;
 
@@ -18,8 +19,14 @@ public class Walking : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.W))
+        {
+            checkRotation();
+        }
+
         if (Input.GetKeyDown (KeyCode.W)) {
 			anim.SetTrigger ("Running");
+            checkRotation();
         } else if (Input.GetKeyUp (KeyCode.W)) {
 			anim.SetTrigger ("Idle");
         }
@@ -56,4 +63,13 @@ public class Walking : MonoBehaviour {
 			anim.SetBool ("JumpFinished", false);
 		}
 	}
+
+    void checkRotation()
+    {
+        if ((Mathf.Abs(characterFollow.localEulerAngles.y) - Mathf.Abs(transform.localEulerAngles.y) > maxRot)
+            || (Mathf.Abs(characterFollow.localEulerAngles.y) - Mathf.Abs(transform.localEulerAngles.y) < -maxRot))
+        {
+            characterFollow.rotation = Quaternion.Lerp(characterFollow.rotation, transform.rotation, 0.5f);
+        }
+    }
 }
