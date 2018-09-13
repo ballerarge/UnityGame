@@ -157,26 +157,6 @@ Prefab:
       propertyPath: characterFollow
       value: 
       objectReference: {fileID: 365250587}
-    - target: {fileID: 114155410742915098, guid: 22ad651c78c4a494e92acb152dcc7ac8,
-        type: 2}
-      propertyPath: maxRotLeft
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 114155410742915098, guid: 22ad651c78c4a494e92acb152dcc7ac8,
-        type: 2}
-      propertyPath: maxRotRight
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 114155410742915098, guid: 22ad651c78c4a494e92acb152dcc7ac8,
-        type: 2}
-      propertyPath: maxRot
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 114155410742915098, guid: 22ad651c78c4a494e92acb152dcc7ac8,
-        type: 2}
-      propertyPath: rotationSpeed
-      value: 3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22ad651c78c4a494e92acb152dcc7ac8, type: 2}
   m_IsPrefabAsset: 0

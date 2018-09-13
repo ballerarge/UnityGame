@@ -8,6 +8,7 @@ public class Walking : MonoBehaviour {
 	public float rotationSpeed;
     public Transform characterFollow;
     public float maxRot;
+    public float rotFollowSpeed;
 
 	Animator anim;
 
@@ -33,6 +34,7 @@ public class Walking : MonoBehaviour {
 
 		if (Input.GetKeyDown (KeyCode.S)) {
 			anim.SetTrigger ("RunningBackwards");
+            checkRotation();
         } else if (Input.GetKeyUp (KeyCode.S)) {
 			anim.SetTrigger ("Idle");
         }
@@ -54,10 +56,12 @@ public class Walking : MonoBehaviour {
 
 		if (anim.GetBool ("JumpFinished")) {
 			if (Input.GetKey (KeyCode.W)) {
-				anim.SetTrigger ("Running");
-			} else if (Input.GetKey (KeyCode.S)) {
-				anim.SetTrigger ("RunningBackwards");
-			} else {
+                anim.SetTrigger ("Running");
+                checkRotation();
+            } else if (Input.GetKey (KeyCode.S)) {
+                anim.SetTrigger ("RunningBackwards");
+                checkRotation();
+            } else {
 				anim.SetTrigger ("Idle");
 			}
 			anim.SetBool ("JumpFinished", false);
@@ -69,7 +73,9 @@ public class Walking : MonoBehaviour {
         if ((Mathf.Abs(characterFollow.localEulerAngles.y) - Mathf.Abs(transform.localEulerAngles.y) > maxRot)
             || (Mathf.Abs(characterFollow.localEulerAngles.y) - Mathf.Abs(transform.localEulerAngles.y) < -maxRot))
         {
-            characterFollow.rotation = Quaternion.Lerp(characterFollow.rotation, transform.rotation, 0.5f);
+            // characterFollow.rotation = Quaternion.Lerp(characterFollow.rotation, transform.rotation, 0.5f);
+            characterFollow.rotation = Quaternion.RotateTowards(characterFollow.rotation, transform.rotation, rotFollowSpeed * Time.deltaTime);
+
         }
     }
 }
