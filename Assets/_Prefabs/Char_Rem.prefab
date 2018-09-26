@@ -5573,7 +5573,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1785731233020918}
   serializedVersion: 2
-  m_Mass: 10
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -5628,6 +5628,14 @@ MonoBehaviour:
   characterFollow: {fileID: 0}
   maxRot: 20
   rotFollowSpeed: 10
+  jump: {x: 0, y: 2, z: 0}
+  jumpForce: 3
+  jumpTimer: 0
+  maxJumpSeconds: 0.5
+  fallTimer: 0
+  maxFallSeconds: 1.8
+  jumping: 0
+  falling: 0
 --- !u!114 &114670136660817938
 MonoBehaviour:
   m_ObjectHideFlags: 1
