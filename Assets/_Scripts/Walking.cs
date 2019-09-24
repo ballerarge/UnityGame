@@ -37,6 +37,7 @@ public class Walking : MonoBehaviour {
 
         // Animator code that fires events for
         // character running.
+        print(Input.GetKeyDown(KeyCode.W));
         if (Input.GetKeyDown (KeyCode.W)) {
 			anim.SetTrigger ("Running");
             checkRotation();

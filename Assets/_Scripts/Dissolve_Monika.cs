@@ -12,7 +12,7 @@ public class Dissolve_Monika : MonoBehaviour {
 	public int framesCount;
 	public float amountToDissolve;
 	public Shader dissolveShader;
-	public Material matToCopy;
+	//public Material matToCopy;
 	public Texture tex;
 
     private void Start() {
