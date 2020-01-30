@@ -66,6 +66,7 @@
      <Compile Include="Assets\_Scripts\Other\Attack.cs" />
      <Compile Include="Assets\_Scripts\Other\AutoConnectJoint.cs" />
      <Compile Include="Assets\_Scripts\Other\CameraFollow.cs" />
+     <Compile Include="Assets\_Scripts\Other\CameraRotate.cs" />
      <Compile Include="Assets\_Scripts\Other\CheckAnimationStatus.cs" />
      <Compile Include="Assets\_Scripts\Other\Dissolve_Monika.cs" />
      <Compile Include="Assets\_Scripts\Other\FollowChar.cs" />
