@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CameraRotate : MonoBehaviour
 {
+
     public Transform objectToRotateAround;
     public int camRotSpeed;
     private bool isCamMoving;

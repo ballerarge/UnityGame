@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Walking : MonoBehaviour {
-
-	[Header ("Set in Inspector")]
+public class Walking_Example : MonoBehaviour
+{
+    [Header ("Set in Inspector")]
 	public float rotationSpeed;
     public Transform characterFollow;
     public float maxRot;

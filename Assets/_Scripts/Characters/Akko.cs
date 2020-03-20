@@ -39,22 +39,30 @@ public class Akko : MonoBehaviour, ICharacter
         if (Input.GetKey(KeyCode.D)) {
             moveRight();
         }
+
+        if (Input.GetKey(KeyCode.Space)) {
+            jump();
+        }
     }
 
     public void moveForwards() {
-        this.transform.Translate(Vector3.forward * Time.deltaTime, Space.World);
+        transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, Camera.main.transform.localEulerAngles.y, transform.localEulerAngles.z);
+        transform.Translate(transform.forward * Time.deltaTime * move_speed, Space.World);
     }
 
     public void moveBackwards() {
-        this.transform.Translate(Vector3.back * Time.deltaTime, Space.World);
+        transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, Camera.main.transform.localEulerAngles.y, transform.localEulerAngles.z);
+        transform.Translate(-1 * transform.forward * Time.deltaTime * move_speed, Space.World);
     }
 
     public void moveLeft() {
-        this.transform.Translate(Vector3.left * Time.deltaTime, Space.World);
+        transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, Camera.main.transform.localEulerAngles.y, transform.localEulerAngles.z);
+        transform.Translate(-1 * transform.right * Time.deltaTime * move_speed, Space.World);
     }
 
     public void moveRight() {
-        this.transform.Translate(Vector3.right * Time.deltaTime, Space.World);
+        transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, Camera.main.transform.localEulerAngles.y, transform.localEulerAngles.z);
+        transform.Translate(transform.right * Time.deltaTime * move_speed, Space.World);
     }
 
     public void jump() {
@@ -66,3 +74,10 @@ public class Akko : MonoBehaviour, ICharacter
     public void performAttack() {
     }
 }
+
+enum Directions {
+        up,
+        down,
+        left,
+        right
+    }
