@@ -74,6 +74,7 @@
      <Compile Include="Assets\_Scripts\Other\FollowChar.cs" />
      <Compile Include="Assets\_Scripts\Other\Walking_Example.cs" />
      <Compile Include="Assets\DissolveEmissionShader\DissolveSphere.cs" />
+     <None Include="Assets\_Scripts\Characters\Direction_Movement_State_Machine.txt" />
      <None Include="Assets\DissolveEmissionShader\DissolveEmission.shader" />
      <None Include="Assets\_Materials\Shaders\Test.shader" />
      <None Include="Assets\_Materials\Shaders\Dissolve.shader" />

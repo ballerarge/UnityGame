@@ -1,0 +1,17 @@
+Button push down
+- Start moving in that direction
+
+Button held down
+- Continue moving in that direction
+- If already moving in that direction, don't start moving in that direction again
+
+Button lift up (released)
+- Stop moving that direction, if moving in that direction
+
+Button pushed down when another is held down
+- Start moving in the new direction, stop moving in old direction
+
+Button lifted up when another is held down
+- If button lifted up is the direction character is moving, switch to moving in other direction of other held down button
+- If button lifted up is not the direction the character is moving, do nothing.
+
